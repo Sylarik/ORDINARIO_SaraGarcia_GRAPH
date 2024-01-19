@@ -8,7 +8,7 @@ export const typeDefs = `#graphql
     }
     
     type Query { # Endpoints
-        getExample(id:ID): [Example!]!
+        getExample: [Example!]!
     }
    
     type Mutation { # Endpoints
