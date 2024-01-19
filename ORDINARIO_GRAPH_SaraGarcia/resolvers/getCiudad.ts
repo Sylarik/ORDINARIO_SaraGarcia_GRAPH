@@ -3,7 +3,7 @@ import { load } from "https://deno.land/std@0.204.0/dotenv/mod.ts";
 const env = await load();
 
 export const getCiudad = async (pais: string) => {
-    const API_KEY = env.API_KEY || Deno.env.get("API_KEY") || "/wVeUzQpA/tfl2AodcdA8w==ffyAsXAdBI0jvVyp"
+    const API_KEY = env.API_KEY || Deno.env.get("API_KEY")
     const url = `https://api.api-ninjas.com/v1/country?name=${pais}`
     const headers = {'X-Api-Key': API_KEY}
 
