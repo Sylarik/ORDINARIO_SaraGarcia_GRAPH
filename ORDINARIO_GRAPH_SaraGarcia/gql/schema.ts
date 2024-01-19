@@ -3,17 +3,26 @@
 
 export const typeDefs = `#graphql
     
-    type Example{
+    type ContactDB{
         id: ID!
+        nombre: String!
+        telefono: String!
+        pais: String!
+        hora_actual: String!
     }
     
     type Query { # Endpoints
-        getExample: [Example!]!
+        getContact(id: ID!): ContactDB!
+        getContacts: [ContactDB!]
     }
    
     type Mutation { # Endpoints
-            addExample(name: String!): Example!
-        }
+        addContact(nombre: String!, telefono: String!): ContactDB
+        deleteContact(id: ID!): Boolean
+        updateContact(id:ID!, nombre:String, telefono:String): ContactDB
+
+
+    }
     
 `;
 

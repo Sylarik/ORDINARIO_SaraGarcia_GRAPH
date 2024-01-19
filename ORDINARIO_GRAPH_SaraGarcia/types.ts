@@ -1,5 +1,9 @@
 
-export type Example = {
-    id: string;
+
+export type ContactDB = {
+    nombre: string
+    telefono: string
+    pais: string
+    
 }
  
