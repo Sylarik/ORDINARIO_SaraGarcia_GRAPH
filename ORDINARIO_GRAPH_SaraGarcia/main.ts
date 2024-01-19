@@ -25,7 +25,7 @@ const env = await load(); //Carga Variables de entorno
 
 //--------------
 //borrar la primera
-const MONGO_URL = env.MONGO_URL || /*Deno.env.get("MONGO_URL") ||*/ "mongodb+srv://sgarciag18:123@cluster0.f9boxcy.mongodb.net/ORDINARIO?retryWrites=true&w=majority"; //Variable del sistema operativo
+const MONGO_URL = env.MONGO_URL || Deno.env.get("MONGO_URL"); //Variable del sistema operativo
 const PORT = env.PORT || Deno.env.get("PORT") || 3060; //Variable del sistema operativo
 //------------
 
